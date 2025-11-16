@@ -33,47 +33,53 @@ const FaqSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-12">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start justify-center gap-10 px-4">
+    <section id="faq" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-start gap-12">
+
         {/* LEFT IMAGE */}
-        <img
-          className="max-w-sm w-full rounded-xl shadow-md h-auto object-cover"
-          src={imageUrls.logo}
-          alt="Pepper farm"
-        />
+        <div className="md:w-1/2 flex justify-center">
+          <img
+            className="w-full max-w-sm rounded-2xl shadow-lg object-cover"
+            src={imageUrls.logo}
+            alt="Pepper Farm"
+          />
+        </div>
 
         {/* RIGHT CONTENT */}
-        <div className="w-full">
-          <p className="text-green-600 text-sm font-semibold">FAQ's</p>
-          <h1 className="text-3xl font-bold text-gray-800">
-            Frequently Asked Questions
+        <div className="md:w-1/2 w-full">
+          <p className="text-green-600 text-sm font-semibold tracking-wide">
+            FREQUENTLY ASKED QUESTIONS
+          </p>
+
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 leading-tight">
+            Everything You Need to Know
           </h1>
-          <p className="text-sm text-slate-500 mt-2 pb-4">
-            Everything you need to know about our premium-quality pepper
-            products, shipping, and services.
+
+          <p className="text-slate-500 mt-3 mb-6 text-sm">
+            Learn more about our premium-quality pepper products, delivery, and customization options.
           </p>
 
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-b border-slate-200 py-4 cursor-pointer"
+              className="border-b border-slate-200 py-4 cursor-pointer select-none"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
               {/* Question Row */}
               <div className="flex items-center justify-between">
-                <h3 className="text-base font-medium text-gray-800">
+                <h3 className="text-base md:text-lg font-medium text-gray-800">
                   {faq.question}
                 </h3>
 
-                {/* Arrow Icon */}
+                {/* Arrow */}
                 <svg
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
                   fill="none"
                   className={`${
-                    openIndex === index ? "rotate-180" : ""
-                  } transition-all duration-500 ease-in-out`}
+                    openIndex === index ? "rotate-180" : "rotate-0"
+                  } transition-transform duration-500 ease-in-out`}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -87,17 +93,20 @@ const FaqSection = () => {
               </div>
 
               {/* Answer */}
-              <p
-                className={`text-sm text-slate-500 transition-all duration-500 ease-in-out max-w-md ${
+              <div
+                className={`overflow-hidden transition-all duration-500 ${
                   openIndex === index
-                    ? "opacity-100 max-h-[300px] translate-y-0 pt-4"
-                    : "opacity-0 max-h-0 -translate-y-2"
+                    ? "max-h-40 opacity-100 mt-3"
+                    : "max-h-0 opacity-0"
                 }`}
               >
-                {faq.answer}
-              </p>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
             </div>
           ))}
+
         </div>
       </div>
     </section>

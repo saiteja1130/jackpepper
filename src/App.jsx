@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Header from "./components/Header.jsx";
@@ -9,9 +9,19 @@ import AllProducts from "./pages/AllProducts.jsx";
 
 const App = () => {
   const location = useLocation();
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [pathname]);
+
+    return null;
+  };
 
   return (
     <div className="min-h-screen bg-light-green text-gray-800">
+      <ScrollToTop />
       <Header />
       <main className="pt-24 container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatePresence mode="wait">

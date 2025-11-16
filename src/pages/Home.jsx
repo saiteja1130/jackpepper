@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard.jsx";
 import WhatsAppButton from "../components/WhatsAppButton.jsx";
 import ContactSection from "../components/ContactSection.jsx";
-import { products } from "../data/constants.jsx";
+import { products } from "../data/constants.js";
 import { LeafIcon } from "../components/icons/LeafIcon.jsx";
 import { QualityIcon } from "../components/icons/QualityIcon.jsx";
 import { TruckIcon } from "../components/icons/TruckIcon.jsx";
@@ -35,6 +35,7 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
+      className="font-body"
     >
       {/* ====================== HERO SECTION ======================== */}
       <section className="relative bg-gray-900 min-h-[60vh] flex items-center overflow-hidden">
@@ -56,11 +57,11 @@ const Home = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-3">
+                <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-3">
                   100% Healthy & Tasty
                 </h1>
 
-                <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-green-400 mb-6">
+                <h2 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-green-400 mb-6">
                   ORGANIC FOOD
                 </h2>
               </motion.div>
@@ -69,7 +70,7 @@ const Home = () => {
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed mb-10"
+                className="font-body text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed mb-10"
               >
                 A place where we help you buy fresh, tasty, and nutrient-rich
                 grocery products sourced directly from organic farms.
@@ -82,7 +83,7 @@ const Home = () => {
               >
                 <Link
                   to="/products"
-                  className="px-8 sm:px-10 py-3 sm:py-4 bg-green-500 hover:bg-green-600 text-white font-bold text-lg sm:text-xl rounded-full shadow-xl transition-all transform hover:scale-105"
+                  className="px-8 sm:px-10 py-3 sm:py-4 bg-green-500 hover:bg-green-600 text-white font-body font-bold text-lg sm:text-xl rounded-full shadow-xl transition-all transform hover:scale-105"
                 >
                   Shop Now
                 </Link>
@@ -93,7 +94,7 @@ const Home = () => {
       </section>
 
       {/* ====================== STATS SECTION ======================== */}
-      <section className="bg-green-600 text-white py-14 sm:py-16">
+      <section className="bg-green-600 text-white py-14 sm:py-16 font-body">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
@@ -110,10 +111,10 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="space-y-2"
               >
-                <p className="text-2xl sm:text-3xl md:text-5xl font-bold">
+                <p className="font-heading text-2xl sm:text-3xl md:text-5xl font-bold">
                   {stat.value}
                 </p>
-                <p className="text-sm sm:text-lg opacity-90 font-medium">
+                <p className="font-body text-sm sm:text-lg opacity-90 font-medium">
                   {stat.label}
                 </p>
               </motion.div>
@@ -123,7 +124,7 @@ const Home = () => {
       </section>
 
       {/* ====================== PRODUCTS SECTION ======================== */}
-      <section id="products" className="py-12 sm:py-20 md:py-24 bg-white">
+      <section id="products" className="py-12 sm:py-20 md:py-24 bg-white font-body">
         <div className="container mx-auto">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -132,11 +133,11 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
               Our Best Sellers
             </h2>
             <div className="mt-4 w-24 h-1.5 bg-green-600 mx-auto rounded-full"></div>
-            <p className="mt-6 text-gray-600 text-base sm:text-lg max-w-xl mx-auto">
+            <p className="mt-6 text-gray-600 text-base sm:text-lg max-w-xl mx-auto font-body">
               Discover our most popular spices, carefully selected for their
               exceptional quality and flavor.
             </p>
@@ -165,7 +166,7 @@ const Home = () => {
           >
             <Link
               to="/products"
-              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1"
+              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-green-600 hover:bg-green-700 text-white font-body font-semibold rounded-lg shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1"
             >
               View All Products
             </Link>
@@ -174,7 +175,7 @@ const Home = () => {
       </section>
 
       {/* ====================== WHY CHOOSE US ======================== */}
-      <section className="py-12 sm:py-20 bg-gray-50">
+      <section className=" mt-8 py-12 sm:py-20 bg-gray-50 font-body">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -182,11 +183,11 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
               Why Choose Us
             </h2>
             <div className="mt-4 w-24 h-1.5 bg-green-600 mx-auto rounded-full"></div>
-            <p className="max-w-3xl mx-auto mt-6 text-gray-600 text-sm sm:text-base md:text-lg">
+            <p className="max-w-3xl mx-auto mt-6 text-gray-600 text-sm sm:text-base md:text-lg font-body">
               Jack Pepper Farms is your trusted partner for authentic spices.
               We deliver healthy, flavorful, and premium-quality products.
             </p>
@@ -221,10 +222,10 @@ const Home = () => {
                 <div className="w-14 h-14 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
                   <item.icon className="w-7 h-7 sm:w-8 sm:h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+                <p className="font-body text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>
@@ -235,9 +236,6 @@ const Home = () => {
 
       {/* ====================== FAQ ======================== */}
       <FaqSection />
-
-      {/* ====================== CONTACT SECTION ======================== */}
-      {/* <ContactSection /> */}
 
       {/* ====================== WHATSAPP BUTTON ======================== */}
       <WhatsAppButton />

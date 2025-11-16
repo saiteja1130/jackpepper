@@ -4,19 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#388E3C", // A medium green
-        "primary-dark": "#2E7D32", // A darker green
-        secondary: "#66BB6A", // A lighter green
-        "secondary-dark": "#4CAF50", // A slightly darker secondary green
-        "light-green": "#F0F4C3", // Very light green for backgrounds
-        "accent-green": "#8BC34A", // An accent green
+        primary: "#388E3C",
+        "primary-dark": "#2E7D32",
+        secondary: "#66BB6A",
+        "secondary-dark": "#4CAF50",
+        "light-green": "#F0F4C3",
+        "accent-green": "#8BC34A",
       },
+
+      // ★ Modern Font Family
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        serif: ["Playfair Display", "serif"],
-        organic: ["Lora", "serif"],
-        body: ["Open Sans", "sans-serif"],
+        heading: ["Merriweather", "serif"],
+        body: ["Roboto", "sans-serif"],
+        organic: ["Lobster", "cursive"], // For logo/brand titles
       },
+
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1rem" }],
         sm: ["0.875rem", { lineHeight: "1.25rem" }],
@@ -30,6 +32,7 @@ export default {
         "6xl": ["3.75rem", { lineHeight: "1" }],
         "7xl": ["4.5rem", { lineHeight: "1" }],
       },
+
       fontWeight: {
         light: 300,
         normal: 400,

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { products } from "../data/constants.jsx";
+import { products } from "../data/constants.js";
 import WhatsAppButton from "../components/WhatsAppButton.jsx";
 import ProductCard from "../components/ProductCard.jsx";
 import { ArrowLeftIcon } from "../components/icons/ArrowLeftIcon.jsx";
@@ -13,12 +13,13 @@ import { LeafIcon } from "../components/icons/LeafIcon.jsx";
 const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === Number(id));
+
   const [activeTab, setActiveTab] = useState("description");
 
   if (!product) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen text-center bg-gray-50">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+      <div className="flex flex-col items-center justify-center min-h-screen text-center bg-gray-50 font-sans">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800 leading-tight">
           Product not found!
         </h2>
         <Link
@@ -38,7 +39,7 @@ const ProductDetail = () => {
 
   return (
     <motion.div
-      className="container mx-auto pb-10 sm:pb-12 md:pb-16"
+      className="container mx-auto pb-10 sm:pb-12 md:pb-16 font-sans"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -82,11 +83,11 @@ const ProductDetail = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
             {product.name}
           </h1>
 
-          <div className="text-gray-700 leading-relaxed space-y-4 sm:space-y-5">
+          <div className="text-gray-700 leading-relaxed space-y-4 sm:space-y-5 tracking-tight">
             <p className="text-lg sm:text-xl font-semibold text-gray-900">
               Product Overview
             </p>
@@ -106,7 +107,7 @@ const ProductDetail = () => {
           </div>
 
           {/* PRICE */}
-          <p className="text-4xl sm:text-5xl font-extrabold text-green-600">
+          <p className="text-4xl sm:text-5xl font-extrabold text-green-600 tracking-tight">
             {product.price}
           </p>
         </motion.div>
@@ -115,18 +116,18 @@ const ProductDetail = () => {
       {/* READY TO ORDER CTA */}
       <motion.div
         className="mt-12 sm:mt-16 md:mt-20 w-full bg-gradient-to-br from-green-600 to-green-400 
-                   rounded-3xl shadow-2xl p-6 sm:p-10 md:p-14 lg:p-16 text-white"
+                   rounded-3xl shadow-2xl p-6 sm:p-10 md:p-14 lg:p-16 text-white font-sans"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h3 className="text-3xl sm:text-4xl font-extrabold mb-5 sm:mb-6 text-center drop-shadow-md">
+        <h3 className="text-3xl sm:text-4xl font-extrabold mb-5 sm:mb-6 text-center tracking-tight">
           Ready to Order?
         </h3>
 
         <p
           className="text-center text-base sm:text-lg max-w-2xl mx-auto opacity-90 
-                      mb-8 sm:mb-10"
+                      mb-8 sm:mb-10 leading-relaxed"
         >
           Place your order instantly through WhatsApp. Fast response • Quick
           delivery • Premium quality guaranteed.
@@ -162,7 +163,7 @@ const ProductDetail = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 tracking-tight">
           Related Products
         </h2>
         <div className="mt-3 sm:mt-4 w-24 sm:w-28 h-1.5 bg-green-600 mx-auto rounded-full"></div>
@@ -176,7 +177,9 @@ const ProductDetail = () => {
           ))}
         </div>
       </motion.section>
-      <section className="py-12 sm:py-20 bg-gray-50">
+
+      {/* WHY CHOOSE US */}
+      <section className="mt-8 py-12 sm:py-20 bg-gray-50 font-sans">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -184,11 +187,11 @@ const ProductDetail = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
               Why Choose Us
             </h2>
             <div className="mt-4 w-24 h-1.5 bg-green-600 mx-auto rounded-full"></div>
-            <p className="max-w-3xl mx-auto mt-6 text-gray-600 text-sm sm:text-base md:text-lg">
+            <p className="max-w-3xl mx-auto mt-6 text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
               Jack Pepper Farms is your trusted partner for authentic spices. We
               deliver healthy, flavorful, and premium-quality products.
             </p>
@@ -223,10 +226,10 @@ const ProductDetail = () => {
                 <div className="w-14 h-14 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
                   <item.icon className="w-7 h-7 sm:w-8 sm:h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed tracking-tight">
                   {item.desc}
                 </p>
               </motion.div>

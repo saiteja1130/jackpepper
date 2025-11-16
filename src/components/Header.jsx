@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { PHONE_NUMBER, LOGO_URL } from "../data/constants.jsx";
+import { PHONE_NUMBER, LOGO_URL } from "../data/constants.js";
 import { PhoneIcon } from "./icons/PhoneIcon.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -45,9 +45,9 @@ const Header = () => {
               className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
             />
 
-            {/* Brand Text */}
+            {/* Brand Text with font-organic */}
             <p
-              className="text-xl sm:text-2xl font-extrabold tracking-tight 
+              className="text-xl sm:text-2xl font-organic tracking-tight 
                   text-gray-900 group-hover:text-green-600 transition-colors duration-300"
             >
               Jack <span className="text-green-600">Pepper</span> Farms
@@ -55,26 +55,24 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden  lg:flex items-center justify-center gap-8">
+          <div className="hidden lg:flex items-center justify-center gap-8">
             <Link
               to="/"
-              className={`${navLinkClass} ${
+              className={`${navLinkClass} font-heading ${
                 location.pathname === "/" ? activeNavLinkClass : ""
               }`}
             >
               Home
             </Link>
-            <a href="/#products" className={navLinkClass}>
+            <Link to="/products" className={`${navLinkClass} font-heading`}>
               Products
-            </a>
-            {/* <a href="/#contact" className={navLinkClass}>
-              Contact
-            </a> */}
+            </Link>
 
+            {/* Call Button */}
             <div className="hidden md:flex items-center">
               <a
                 href={`tel:${PHONE_NUMBER}`}
-                className="flex items-center gap-2 px-6 py-2 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition duration-300 shadow-lg"
+                className="flex items-center gap-2 px-6 py-2 bg-green-600 text-white font-bold font-body rounded-lg hover:bg-green-700 transition duration-300 shadow-lg"
               >
                 <PhoneIcon className="w-4 h-4" />
                 <span>Call Now</span>
@@ -86,7 +84,7 @@ const Header = () => {
           <div className="md:hidden flex items-center space-x-2">
             <a
               href={`tel:${PHONE_NUMBER}`}
-              className="flex items-center gap-1 px-3 py-2 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition text-sm shadow-lg"
+              className="flex items-center gap-1 px-3 py-2 bg-green-600 text-white font-bold font-body rounded-lg hover:bg-green-700 transition text-sm shadow-lg"
             >
               <PhoneIcon className="w-4 h-4" />
               <span>Call</span>
@@ -130,7 +128,7 @@ const Header = () => {
             <div className="px-4 pt-2 pb-4">
               <Link
                 to="/"
-                className={`${mobileNavLinkClass} ${navLinkClass} ${
+                className={`${mobileNavLinkClass} ${navLinkClass} font-heading ${
                   location.pathname === "/" ? activeNavLinkClass : ""
                 }`}
                 onClick={() => setIsMenuOpen(false)}
@@ -138,21 +136,13 @@ const Header = () => {
                 Home
               </Link>
 
-              <a
-                href="/#products"
-                className={`${mobileNavLinkClass} ${navLinkClass}`}
+              <Link
+                to="/products"
+                className={`${mobileNavLinkClass} ${navLinkClass} font-heading`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
-              </a>
-
-              {/* <a
-                href="/#contact"
-                className={`${mobileNavLinkClass} ${navLinkClass}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a> */}
+              </Link>
             </div>
           </motion.div>
         )}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { WHATSAPP_NUMBER, GENERAL_ENQUIRY_MESSAGE } from '../data/constants.jsx';
+import { WHATSAPP_NUMBER, GENERAL_ENQUIRY_MESSAGE } from '../data/constants.js';
 import { WhatsAppIcon } from './icons/WhatsAppIcon.jsx';
 
 const WhatsAppButton = ({ productName }) => {

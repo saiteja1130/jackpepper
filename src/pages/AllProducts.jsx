@@ -8,7 +8,7 @@ const AllProducts = () => {
   return (
     <div
       className="
-        pb-14 sm:pb-16 md:pb-20 bg-white
+        pb-14 sm:pb-16 md:pb-20 bg-white font-body
       "
     >
       {/* Page Title */}
@@ -17,7 +17,7 @@ const AllProducts = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-snug"
+          className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-snug"
         >
           Our Premium <br className="sm:hidden" /> Products
         </motion.h1>
@@ -26,7 +26,7 @@ const AllProducts = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-gray-600 mt-4 text-sm sm:text-base max-w-2xl mx-auto px-2"
+          className="font-body text-gray-600 mt-4 text-sm sm:text-base max-w-2xl mx-auto px-2"
         >
           Explore our organically grown, hand-picked spices, superfoods, herbs,
           and wellness products — directly from Jack Pepper Farms.
@@ -48,6 +48,7 @@ const AllProducts = () => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+
       <FaqSection />
     </div>
   );
