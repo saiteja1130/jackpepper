@@ -120,6 +120,20 @@ const ProductDetail = () => {
           <p className="text-lg sm:text-xl text-gray-600 font-medium">
             Quantity: {product.quantity}
           </p>
+
+          {/* Return Policy */}
+          <div className="mt-8 sm:mt-10 pt-6 border-t border-gray-200">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Return Policy</h2>
+            <p className="text-base sm:text-lg text-gray-700 mb-2">
+              Any damaged product will be replaced within 10 days of receipt of complaint.
+            </p>
+            <p className="text-base sm:text-lg text-gray-700 mb-2">
+              Customer care mobile: <a href="tel:8073781750" className="text-green-600 hover:underline">8073781750</a>
+            </p>
+            <p className="text-base sm:text-lg text-gray-700">
+              Email: <a href="mailto:jackpepperfarms@gmail.com" className="text-green-600 hover:underline">jackpepperfarms@gmail.com</a>
+            </p>
+          </div>
         </motion.div>
       </div>
 

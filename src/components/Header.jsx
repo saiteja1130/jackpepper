@@ -67,6 +67,11 @@ const Header = () => {
             <Link to="/products" className={`${navLinkClass} font-heading`}>
               Products
             </Link>
+            <Link to="/about-us" className={`${navLinkClass} font-heading ${
+                location.pathname === "/about-us" ? activeNavLinkClass : ""
+              }`}>
+              About Us
+            </Link>
 
             {/* Call Button */}
             <div className="hidden md:flex items-center">
@@ -142,6 +147,15 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
+              </Link>
+              <Link
+                to="/about-us"
+                className={`${mobileNavLinkClass} ${navLinkClass} font-heading ${
+                  location.pathname === "/about-us" ? activeNavLinkClass : ""
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
               </Link>
             </div>
           </motion.div>

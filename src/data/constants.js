@@ -15,8 +15,9 @@ import Image15 from "../assets/Images/15.jpg";
 import Image16 from "../assets/Images/16.jpg";
 import Image17 from "../assets/Images/17.jpg";
 import Image18 from "../assets/Images/18.jpg";
-import Cloves from "../assets/Images/cloves.jpg";
-
+import Image19 from "../assets/Images/19.jpg";
+import Image20 from "../assets/Images/20.jpg";
+import Image21 from "../assets/Images/21.jpg";
 // Image URLs from user upload, hosted for convenience
 export const imageUrls = {
   moringaCapsules: Image2,
@@ -26,7 +27,6 @@ export const imageUrls = {
   blackPepper: Image12,
   blackPepperPowder: Image17,
   cinnamonPowder: Image18,
-  clovesPowder: Image8,
   cinnamonSticks: Image2,
   clovesWhole: Image3,
   japathri: Image4,
@@ -40,6 +40,9 @@ export const imageUrls = {
   blackPepperWhole: Image12,
   turmericMoringaCapsules: Image13,
   turmericMoringaLeafrCapsules: Image14,
+  ginger: Image19,
+  nutmegPowder: Image20,
+  clovesPowder: Image21,
 };
 
 export const LOGO_URL = imageUrls.logo;
@@ -75,7 +78,7 @@ export const products = [
     name: "Turmeric + Organic Moringa Capsules (Bundle)",
     mrp: "₹499",
     offerPrice: "₹399",
-    quantity: "60 NO",
+    quantity: "60 NO + 60 NO",
     imageUrl: imageUrls.turmericMoringaCapsules, // Using existing image, consider a bundle specific image
     description:
       "A powerful combination of Turmeric and Organic Moringa capsules for enhanced health benefits.",
@@ -208,7 +211,7 @@ export const products = [
     mrp: "₹120", // Using previous price as MRP
     offerPrice: "₹90",
     quantity: "100gm",
-    imageUrl: imageUrls.gingerPowder, // Using powder image for dry ginger
+    imageUrl: imageUrls.ginger, // Using powder image for dry ginger
     description:
       "Our Dry Ginger offers a pungent, spicy-sweet flavor and aroma. It's a versatile spice, perfect for baking, marinades, and traditional remedies.",
     category: "Spices",
@@ -267,7 +270,7 @@ export const products = [
     mrp: "₹99", // Using previous price as MRP
     offerPrice: "₹75",
     quantity: "50gm",
-    imageUrl: imageUrls.nutmeg, // Assuming this image is suitable for powder
+    imageUrl: imageUrls.nutmegPowder, // Assuming this image is suitable for powder
     description:
       "Finely ground from premium quality nutmeg, this powder adds a warm, sweet, and aromatic flavor to both sweet and savory dishes.",
     category: "Powders",

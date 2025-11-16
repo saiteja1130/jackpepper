@@ -124,7 +124,10 @@ const Home = () => {
       </section>
 
       {/* ====================== PRODUCTS SECTION ======================== */}
-      <section id="products" className="py-12 sm:py-20 md:py-24 bg-white font-body">
+      <section
+        id="products"
+        className="py-12 sm:py-20 md:py-24 bg-white font-body"
+      >
         <div className="container mx-auto">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -188,8 +191,10 @@ const Home = () => {
             </h2>
             <div className="mt-4 w-24 h-1.5 bg-green-600 mx-auto rounded-full"></div>
             <p className="max-w-3xl mx-auto mt-6 text-gray-600 text-sm sm:text-base md:text-lg font-body">
-              Jack Pepper Farms is your trusted partner for authentic spices.
-              We deliver healthy, flavorful, and premium-quality products.
+              Jack Pepper Farms is your trusted partner for authentic wellness
+              products like Moringa capsules, Moringa leaf powder,Black pepper,
+              Jackfruit products, premium Cashewnuts and select spices sourced
+              from hightsnges of western ghats.
             </p>
           </motion.div>
 

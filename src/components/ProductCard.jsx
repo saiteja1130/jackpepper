@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const ProductCard = ({ product }) => {
   return (
     <motion.div
-      whileHover={{ y: -4 }}
+      whileHover={{ y: -5, scale: 1.02, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
       transition={{ duration: 0.3 }}
       className="group w-full bg-white rounded-2xl overflow-hidden cursor-pointer
                  border border-green-200 hover:border-green-400
-                 shadow-sm hover:shadow-lg transition-all duration-300
+                 shadow-sm transition-all duration-300
                  font-inter" // 👈 added font family
     >
       <Link to={`/product/${product.id}`}>

@@ -95,12 +95,18 @@ const AllProducts = () => {
                   </span>
                 </h2>
                 {category === "Bundles" && (
-                  <p className="text-center text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-                    Discover our specially curated bundles for great savings and a complete experience. Perfect for gifting or stocking up your pantry!
-                  </p>
-                  <p className="text-center text-md text-gray-600 mb-8 max-w-3xl mx-auto">
-                    Unlock exclusive discounts when you choose our bundles. Experience the best of our products at an unbeatable value!
-                  </p>
+                  <>
+                    <p className="text-center text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
+                      Discover our specially curated bundles for great savings
+                      and a complete experience. Perfect for gifting or stocking
+                      up your pantry!
+                    </p>
+                    <p className="text-center text-md text-gray-600 mb-8 max-w-3xl mx-auto">
+                      Unlock exclusive discounts when you choose our bundles.
+                      Experience the best of our products at an unbeatable
+                      value!
+                    </p>
+                  </>
                 )}
                 <div
                   className="

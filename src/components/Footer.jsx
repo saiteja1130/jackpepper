@@ -25,9 +25,9 @@ const Footer = () => {
           <Link to="/about-us" className="hover:text-white transition-colors duration-300">
             About Us
           </Link>
-          <Link to="/return-policy" className="hover:text-white transition-colors duration-300">
+          {/* <Link to="/return-policy" className="hover:text-white transition-colors duration-300">
             Return Policy
-          </Link>
+          </Link> */}
         </div>
 
         {/* Social Media Icons */}

@@ -32,7 +32,7 @@ const App = () => {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/products" element={<AllProducts />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/return-policy" element={<ReturnPolicy />} />
+            {/* <Route path="/return-policy" element={<ReturnPolicy />} /> */}
           </Routes>
         </AnimatePresence>
       </main>

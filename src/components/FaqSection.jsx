@@ -10,32 +10,22 @@ const FaqSection = () => {
       answer:
         "We supply premium-quality Black Pepper, White Pepper, Green Pepper, Pink Pepper, King Pepper, and a variety of farm-fresh pepper products sourced directly from our plantations.",
     },
-    {
-      question: "Do you offer bulk or wholesale pricing?",
-      answer:
-        "Yes! We offer wholesale, bulk, and export pricing for retailers, distributors, and food businesses. You can contact us directly through WhatsApp or the contact form.",
-    },
+
     {
       question: "Are your products organic and naturally grown?",
       answer:
-        "All our peppers are grown using natural farming practices without harmful chemicals. We follow strict quality control to ensure purity, aroma, and freshness.",
+        "All our Products are grown using natural farming practices without harmful chemicals.To ensure abundant supply of organic manure we maintain own dairy farm..",
     },
     {
       question: "Do you provide PAN India shipping?",
       answer:
         "Yes, we ship across India with fast delivery. Orders are safely packed to maintain freshness and quality during transit.",
     },
-    {
-      question: "Can I get customized packaging for bulk orders?",
-      answer:
-        "Absolutely! We provide private-label and custom packaging options for bulk buyers, restaurants, and retail brands.",
-    },
   ];
 
   return (
     <section id="faq" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-start gap-12">
-
         {/* LEFT IMAGE */}
         <div className="md:w-1/2 flex justify-center">
           <img
@@ -56,7 +46,10 @@ const FaqSection = () => {
           </h1>
 
           <p className="text-slate-500 mt-3 mb-6 text-sm">
-            Learn more about our premium-quality pepper products, delivery, and customization options.
+            Learn more about our premium-quality wellness products like Moringa
+            capsules, Moringa leaf powder,Black pepper, Jackfruit products,
+            premium Cashewnuts and select spices sourced from hightsnges of
+            western ghats..
           </p>
 
           {faqs.map((faq, index) => (
@@ -106,7 +99,6 @@ const FaqSection = () => {
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </section>
