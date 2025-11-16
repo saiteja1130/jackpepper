@@ -107,15 +107,25 @@ const ProductDetail = () => {
           </div>
 
           {/* PRICE */}
-          <p className="text-4xl sm:text-5xl font-extrabold text-green-600 tracking-tight">
-            {product.price}
+          <div className="flex items-baseline gap-3 sm:gap-4">
+            {product.mrp !== product.offerPrice && (
+              <p className="text-2xl sm:text-3xl text-gray-500 line-through font-semibold">
+                {product.mrp}
+              </p>
+            )}
+            <p className="text-4xl sm:text-5xl font-extrabold text-green-600 tracking-tight">
+              {product.offerPrice}
+            </p>
+          </div>
+          <p className="text-lg sm:text-xl text-gray-600 font-medium">
+            Quantity: {product.quantity}
           </p>
         </motion.div>
       </div>
 
       {/* READY TO ORDER CTA */}
       <motion.div
-        className="mt-12 sm:mt-16 md:mt-20 w-full bg-gradient-to-br from-green-600 to-green-400 
+        className="mt-12 sm:mt-16 md:mt-20 w-full bg-linear-to-br from-green-600 to-green-400 
                    rounded-3xl shadow-2xl p-6 sm:p-10 md:p-14 lg:p-16 text-white font-sans"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

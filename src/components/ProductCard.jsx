@@ -31,9 +31,17 @@ const ProductCard = ({ product }) => {
             {product.name}
           </p>
 
-          <p className="text-base sm:text-lg text-green-600 font-bold whitespace-nowrap">
-            {product.price}
-          </p>
+          <div className="flex items-center gap-2">
+            {product.mrp !== product.offerPrice && (
+              <p className="text-sm text-gray-500 line-through">
+                {product.mrp}
+              </p>
+            )}
+            <p className="text-base sm:text-lg text-green-600 font-bold whitespace-nowrap">
+              {product.offerPrice}
+            </p>
+          </div>
+          <p className="text-xs text-gray-500">{product.quantity}</p>
         </div>
       </Link>
     </motion.div>

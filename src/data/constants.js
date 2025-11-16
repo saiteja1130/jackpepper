@@ -50,141 +50,250 @@ export const PHONE_NUMBER = "+918073781750"; // Using number from product images
 export const GENERAL_ENQUIRY_MESSAGE =
   "Hello Jack Pepper Farms, I have an enquiry about your products.";
 
+export const SHIPPING_POLICY = {
+  freeDeliveryThreshold: 750,
+  courierCharge: 60,
+  discountThreshold: 1500,
+  discountPercentage: 5,
+};
+
 export const products = [
   {
     id: 1,
-    name: "Organic Moringa Leaf Capsules",
-    price: "₹349",
+    name: "Organic Moringa Capsules",
+    mrp: "₹499",
+    offerPrice: "₹399",
+    quantity: "120NO",
     imageUrl: imageUrls.moringaCapsules,
     description:
       "Packed with essential nutrients, our Organic Moringa Leaf Capsules are a natural energy booster and support overall wellness. A miracle superfood in a convenient capsule.",
+    category: "Wellness Products",
+    gstRate: 5,
   },
   {
     id: 2,
-    name: "Premium Quality Nutmeg",
-    price: "₹199",
-    imageUrl: imageUrls.nutmeg,
+    name: "Turmeric + Organic Moringa Capsules (Bundle)",
+    mrp: "₹499",
+    offerPrice: "₹399",
+    quantity: "60 NO",
+    imageUrl: imageUrls.turmericMoringaCapsules, // Using existing image, consider a bundle specific image
     description:
-      "Sourced from the high ranges of the Western Ghats, our premium nutmeg adds a warm, sweet, and aromatic flavor to both sweet and savory dishes. A must-have for every kitchen.",
+      "A powerful combination of Turmeric and Organic Moringa capsules for enhanced health benefits.",
+    category: "Wellness Products",
+    gstRate: 5,
   },
   {
     id: 3,
-    name: "Dry Ginger Powder",
-    price: "₹149",
-    imageUrl: imageUrls.gingerPowder,
+    name: "Premium Black Pepper",
+    mrp: "₹299", // Using previous price as MRP
+    offerPrice: "₹249",
+    quantity: "200gm",
+    imageUrl: imageUrls.blackPepperWhole,
     description:
-      "Our Dry Ginger Powder offers a pungent, spicy-sweet flavor and aroma. It's a versatile spice, perfect for baking, marinades, and traditional remedies.",
+      "Sourced from our own organic farm, these whole black peppercorns are rich in piperine. They help detoxify the liver, prevent radical damage, and boost metabolism.",
+    category: "Wellness Products",
+    gstRate: 5,
   },
   {
     id: 4,
-    name: "Black Pepper Powder",
-    price: "₹129",
-    imageUrl: imageUrls.blackPepperPowder,
+    name: "Organic Moringa Powder",
+    mrp: "₹299", // Using previous price as MRP
+    offerPrice: "₹249",
+    quantity: "200gm",
+    imageUrl: imageUrls.moringaPowder,
     description:
-      "Finely ground from premium quality black peppercorns, this powder delivers a sharp, pungent heat that enhances the flavor of any dish. A staple for seasoning and cooking.",
+      "A versatile superfood, our Organic Moringa Leaf Powder is an energy booster that supports skin health and enhances skin radiance. Mix it into your favorite drinks or meals.",
+    category: "Wellness Products",
+    gstRate: 5,
   },
   {
     id: 5,
-    name: "Cinnamon Powder",
-    price: "₹139",
-    imageUrl: imageUrls.cinnamonPowder,
+    name: "Green Jackfruit Powder",
+    mrp: "₹299", // Using previous price as MRP
+    offerPrice: "₹249",
+    quantity: "350gm",
+    imageUrl: imageUrls.greenJackfruitPowder,
     description:
-      "Experience the sweet, woody, and fragrant aroma of our premium Cinnamon Powder. Perfect for desserts, beverages, and savory dishes, adding a touch of warmth and complexity.",
+      "Our Green Jackfruit Powder is a nutritious powerhouse, rich in protein and soluble fiber. It's an excellent, low-glycemic alternative to traditional flours for a healthy lifestyle.",
+    category: "Wellness Products",
+    gstRate: 0,
   },
   {
     id: 6,
-    name: "Cloves Powder",
-    price: "₹159",
-    imageUrl: imageUrls.clovesPowder,
+    name: "Jackfruit Pod Powder",
+    mrp: "₹299", // Using previous price as MRP
+    offerPrice: "₹249",
+    quantity: "200gm",
+    imageUrl: imageUrls.jackfruitPodPowder,
     description:
-      "Our Cloves Powder has an intense, sweet, and pungent flavor. A versatile spice used in baking, cooking, and traditional spice blends for its distinctive taste and aroma.",
+      "Made from ripe jackfruit pods, this powder is rich in dietary fiber, protein, and soluble fiber. A naturally sweet and healthy addition to your smoothies, desserts, and baked goods.",
+    category: "Wellness Products",
+    gstRate: 0,
   },
   {
     id: 7,
-    name: "Premium Cinnamon Sticks",
-    price: "₹189",
-    imageUrl: imageUrls.cinnamonSticks,
+    name: "Premium Cashewnuts (W.240)",
+    mrp: "₹299", // Using previous price as MRP
+    offerPrice: "₹249",
+    quantity: "150gm",
+    imageUrl: imageUrls.cashews,
     description:
-      "Sourced from the Western Ghats, these whole cinnamon sticks release a sweet and delicate aroma. Ideal for infusing flavor into drinks, stews, and desserts.",
+      "Enjoy our premium W.240 grade cashewnuts. They are large, crunchy, and have a rich, buttery flavor. A healthy snack that boosts the immune system and improves bone health.",
+    category: "Wellness Products",
+    gstRate: 5,
   },
   {
     id: 8,
-    name: "Premium Quality Cloves",
-    price: "₹219",
-    imageUrl: imageUrls.clovesWhole,
+    name: "Cardamom",
+    mrp: "₹120", // Using previous price as MRP
+    offerPrice: "90",
+    quantity: "20gm",
+    imageUrl: imageUrls.cardamom,
     description:
-      "Hand-picked for their size and oil content, our whole cloves offer a strong, pungent, and sweet flavor. Perfect for studding meats, flavoring sauces, and pickling.",
+      "Our premium green cardamom pods are highly aromatic with a complex flavor profile that is citrusy, minty, spicy, and herbal all at once. A prized spice in global cuisine.",
+    category: "Spices",
+    gstRate: 5,
   },
   {
     id: 9,
     name: "Jathipatri (Mace)",
-    price: "₹249",
+    mrp: "₹120", // Using previous price as MRP
+    offerPrice: "₹90",
+    quantity: "25gm",
     imageUrl: imageUrls.mace,
     description:
       "Mace is the lacy covering of the nutmeg seed, offering a more delicate flavor. It adds a warm, spicy-sweet note to baked goods, savory dishes, and spice blends.",
+    category: "Spices",
+    gstRate: 5,
   },
   {
     id: 10,
-    name: "Premium Cardamom",
-    price: "₹299",
-    imageUrl: imageUrls.cardamom,
+    name: "Cloves",
+    mrp: "₹120", // Using previous price as MRP
+    offerPrice: "₹90",
+    quantity: "50gm",
+    imageUrl: imageUrls.clovesWhole,
     description:
-      "Our premium green cardamom pods are highly aromatic with a complex flavor profile that is citrusy, minty, spicy, and herbal all at once. A prized spice in global cuisine.",
+      "Hand-picked for their size and oil content, our whole cloves offer a strong, pungent, and sweet flavor. Perfect for studding meats, flavoring sauces, and pickling.",
+    category: "Spices",
+    gstRate: 5,
   },
   {
     id: 11,
-    name: "Mahkota Dewa Slices",
-    price: "₹399",
-    imageUrl: imageUrls.mahkotaDewa,
+    name: "Nutmeg",
+    mrp: "₹120", // Using previous price as MRP
+    offerPrice: "₹90",
+    quantity: "100gm",
+    imageUrl: imageUrls.nutmeg,
     description:
-      "Known as 'God's Crown,' Mahkota Dewa is a traditional Indonesian herb. These dried slices are widely used for their reputed health benefits, including controlling diabetes and reducing inflammation.",
+      "Sourced from the high ranges of the Western Ghats, our premium nutmeg adds a warm, sweet, and aromatic flavor to both sweet and savory dishes. A must-have for every kitchen.",
+    category: "Spices",
+    gstRate: 5,
   },
   {
     id: 12,
-    name: "Premium Cashewnuts (W.240)",
-    price: "₹499",
-    imageUrl: imageUrls.cashews,
+    name: "Cinnamon Sticks",
+    mrp: "₹120", // Using previous price as MRP
+    offerPrice: "₹90",
+    quantity: "100gm",
+    imageUrl: imageUrls.cinnamonSticks,
     description:
-      "Enjoy our premium W.240 grade cashewnuts. They are large, crunchy, and have a rich, buttery flavor. A healthy snack that boosts the immune system and improves bone health.",
+      "Sourced from the Western Ghats, these whole cinnamon sticks release a sweet and delicate aroma. Ideal for infusing flavor into drinks, stews, and desserts.",
+    category: "Spices",
+    gstRate: 5,
   },
   {
     id: 13,
-    name: "Jackfruit Pod Powder",
-    price: "₹299",
-    imageUrl: imageUrls.jackfruitPodPowder,
+    name: "Dry Ginger",
+    mrp: "₹120", // Using previous price as MRP
+    offerPrice: "₹90",
+    quantity: "100gm",
+    imageUrl: imageUrls.gingerPowder, // Using powder image for dry ginger
     description:
-      "Made from ripe jackfruit pods, this powder is rich in dietary fiber, protein, and soluble fiber. A naturally sweet and healthy addition to your smoothies, desserts, and baked goods.",
+      "Our Dry Ginger offers a pungent, spicy-sweet flavor and aroma. It's a versatile spice, perfect for baking, marinades, and traditional remedies.",
+    category: "Spices",
+    gstRate: 5,
   },
   {
     id: 14,
-    name: "Green Jackfruit Powder",
-    price: "₹349",
-    imageUrl: imageUrls.greenJackfruitPowder,
-    description:
-      "Our Green Jackfruit Powder is a nutritious powerhouse, rich in protein and soluble fiber. It's an excellent, low-glycemic alternative to traditional flours for a healthy lifestyle.",
+    name: "Spices Combo (Cardamom, Jathipatri, Cloves, Nutmeg, Cinnamon, Dry Ginger)",
+    mrp: "₹720",
+    offerPrice: "₹499",
+    quantity: "1 unit",
+    imageUrl: imageUrls.logo,
+    description: "A special combo pack of six essential whole spices.",
+    category: "Bundles",
+    gstRate: 5,
   },
   {
     id: 15,
-    name: "Organic Moringa Leaf Powder",
-    price: "₹299",
-    imageUrl: imageUrls.moringaPowder,
+    name: "Cloves Powder",
+    mrp: "₹99",
+    offerPrice: "₹75",
+    quantity: "30gm",
+    imageUrl: imageUrls.clovesPowder,
     description:
-      "A versatile superfood, our Organic Moringa Leaf Powder is an energy booster that supports skin health and enhances skin radiance. Mix it into your favorite drinks or meals.",
+      "Our Cloves Powder has an intense, sweet, and pungent flavor. A versatile spice used in baking, cooking, and traditional spice blends for its distinctive taste and aroma.",
+    category: "Powders",
+    gstRate: 5,
   },
   {
     id: 16,
-    name: "Premium Black Pepper",
-    price: "₹249",
-    imageUrl: imageUrls.blackPepperWhole,
+    name: "Black Pepper Powder",
+    mrp: "₹99", // Using previous price as MRP
+    offerPrice: "₹75",
+    quantity: "40gm",
+    imageUrl: imageUrls.blackPepperPowder,
     description:
-      "Sourced from our own organic farm, these whole black peppercorns are rich in piperine. They help detoxify the liver, prevent radical damage, and boost metabolism.",
+      "Finely ground from premium quality black peppercorns, this powder delivers a sharp, pungent heat that enhances the flavor of any dish. A staple for seasoning and cooking.",
+    category: "Powders",
+    gstRate: 5,
   },
   {
     id: 17,
-    name: "Turmeric + Moringa Capsules",
-    price: "₹399",
-    imageUrl: imageUrls.turmericMoringaCapsules,
+    name: "Dry Ginger Powder",
+    mrp: "₹99", // Using previous price as MRP
+    offerPrice: "₹75",
+    quantity: "50gm",
+    imageUrl: imageUrls.gingerPowder,
     description:
-      "A powerful combination of nature's best anti-inflammatory and antioxidant ingredients. These capsules are blended with black pepper, cinnamon, cloves, and ginger for maximum benefits.",
+      "Our Dry Ginger Powder offers a pungent, spicy-sweet flavor and aroma. It's a versatile spice, perfect for baking, marinades, and traditional remedies.",
+    category: "Powders",
+    gstRate: 5,
+  },
+  {
+    id: 18,
+    name: "Nutmeg Powder",
+    mrp: "₹99", // Using previous price as MRP
+    offerPrice: "₹75",
+    quantity: "50gm",
+    imageUrl: imageUrls.nutmeg, // Assuming this image is suitable for powder
+    description:
+      "Finely ground from premium quality nutmeg, this powder adds a warm, sweet, and aromatic flavor to both sweet and savory dishes.",
+    category: "Powders",
+    gstRate: 5,
+  },
+  {
+    id: 19,
+    name: "Cinnamon Powder",
+    mrp: "₹99", // Using previous price as MRP
+    offerPrice: "₹75",
+    quantity: "50gm",
+    imageUrl: imageUrls.cinnamonPowder,
+    description:
+      "Experience the sweet, woody, and fragrant aroma of our premium Cinnamon Powder. Perfect for desserts, beverages, and savory dishes, adding a touch of warmth and complexity.",
+    category: "Powders",
+    gstRate: 5,
+  },
+  {
+    id: 20,
+    name: "Spice Powders Combo (Cloves, Black Pepper, Dry Ginger, Nutmeg, Cinnamon)",
+    mrp: "₹495",
+    offerPrice: "₹325", // Offer price not provided, using MRP
+    quantity: "1 unit",
+    imageUrl: imageUrls.logo, // Placeholder image
+    description: "A special combo pack of five essential spice powders.",
+    category: "Bundles",
+    gstRate: 5,
   },
 ];

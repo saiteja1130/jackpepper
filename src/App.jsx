@@ -6,6 +6,8 @@ import Home from "./pages/Home.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 import Footer from "./components/Footer.jsx";
 import AllProducts from "./pages/AllProducts.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
+import ReturnPolicy from "./pages/ReturnPolicy.jsx";
 
 const App = () => {
   const location = useLocation();
@@ -29,6 +31,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/products" element={<AllProducts />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/return-policy" element={<ReturnPolicy />} />
           </Routes>
         </AnimatePresence>
       </main>

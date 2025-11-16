@@ -5,6 +5,19 @@ import { products } from "../data/constants";
 import FaqSection from "../components/FaqSection";
 
 const AllProducts = () => {
+  // Group products by category
+  const productsByCategory = products.reduce((acc, product) => {
+    const { category } = product;
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(product);
+    return acc;
+  }, {});
+
+  // Define a preferred order for categories
+  const categoryOrder = ["Wellness Products", "Spices", "Powders", "Bundles"];
+
   return (
     <div
       className="
@@ -33,21 +46,34 @@ const AllProducts = () => {
         </motion.p>
       </div>
 
-      {/* Products Grid */}
-      <div
-        className="
-          grid 
-          grid-cols-2 
-          sm:grid-cols-2 
-          md:grid-cols-3 
-          lg:grid-cols-5 
-          gap-4 sm:gap-6 
-        "
-      >
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      {/* Products Grid by Category */}
+      {categoryOrder.map((category) => {
+        const categoryProducts = productsByCategory[category];
+        if (!categoryProducts || categoryProducts.length === 0) {
+          return null;
+        }
+        return (
+          <div key={category} className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              {category}
+            </h2>
+            <div
+              className="
+                grid 
+                grid-cols-2 
+                sm:grid-cols-2 
+                md:grid-cols-3 
+                lg:grid-cols-5 
+                gap-4 sm:gap-6 
+              "
+            >
+              {categoryProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
+        );
+      })}
 
       <FaqSection />
     </div>

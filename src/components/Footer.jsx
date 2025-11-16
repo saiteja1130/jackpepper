@@ -1,6 +1,7 @@
 import React from "react";
 import { LOGO_URL } from "../data/constants.js";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,6 +18,16 @@ const Footer = () => {
           <h2 className="font-organic text-2xl md:text-3xl font-semibold tracking-wide text-white/90">
             Jack Pepper Farms
           </h2>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="flex justify-center gap-6 mt-6 md:mt-8 text-white/80 text-lg">
+          <Link to="/about-us" className="hover:text-white transition-colors duration-300">
+            About Us
+          </Link>
+          <Link to="/return-policy" className="hover:text-white transition-colors duration-300">
+            Return Policy
+          </Link>
         </div>
 
         {/* Social Media Icons */}
