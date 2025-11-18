@@ -15,6 +15,9 @@ const ProductDetail = () => {
   const product = products.find((p) => p.id === Number(id));
 
   const [activeTab, setActiveTab] = useState("description");
+  const [thumbnail, setThumbnail] = useState(
+    product?.imageUrl || product?.bannerImageUrl || ""
+  );
 
   if (!product) {
     return (
@@ -61,18 +64,39 @@ const ProductDetail = () => {
         {/* LEFT: PRODUCT IMAGE */}
         <div className="lg:col-span-5">
           <motion.div
-            className="rounded-3xl overflow-hidden shadow-xl bg-white border border-green-200 
-                       p-4 sm:p-6 flex items-center justify-center"
+            className="rounded-3xl overflow-hidden  bg-white border border-green-200 
+                       p-4 sm:p-6"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img
-              src={product.imageUrl}
-              alt={product.name}
-              className="w-full h-auto max-h-[55vh] sm:max-h-[65vh] md:max-h-[70vh] 
-                         object-contain"
-            />
+            <div className="flex gap-4 items-start flex-col sm:flex-row">
+              <div className="flex flex-row w-full sm:w-1/4 justify-center sm:justify-start sm:flex-col gap-3">
+                {[product?.imageUrl, product?.bannerImageUrl]
+                  .filter(Boolean)
+                  .map((img, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => setThumbnail(img)}
+                      className="border max-w-24 border-gray-500/30 rounded overflow-hidden cursor-pointer"
+                    >
+                      <img
+                        src={img}
+                        alt={`Thumbnail ${idx + 1}`}
+                        className="mx-auto w-20 h-20 object-cover"
+                      />
+                    </div>
+                  ))}
+              </div>
+
+              <div className="w-full border border-gray-100 rounded overflow-hidden flex items-center justify-center">
+                <img
+                  src={thumbnail || product.imageUrl}
+                  alt={product.name}
+                  className="w-full h-auto max-h-[55vh] sm:max-h-[65vh] md:max-h-[70vh] object-contain"
+                />
+              </div>
+            </div>
           </motion.div>
         </div>
 
@@ -123,15 +147,30 @@ const ProductDetail = () => {
 
           {/* Return Policy */}
           <div className="mt-8 sm:mt-10 pt-6 border-t border-gray-200">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Return Policy</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Return Policy
+            </h2>
             <p className="text-base sm:text-lg text-gray-700 mb-2">
-              Any damaged product will be replaced within 10 days of receipt of complaint.
+              Any damaged product will be replaced within 10 days of receipt of
+              complaint.
             </p>
             <p className="text-base sm:text-lg text-gray-700 mb-2">
-              Customer care mobile: <a href="tel:8073781750" className="text-green-600 hover:underline">8073781750</a>
+              Customer care mobile:{" "}
+              <a
+                href="tel:8073781750"
+                className="text-green-600 hover:underline"
+              >
+                8073781750
+              </a>
             </p>
             <p className="text-base sm:text-lg text-gray-700">
-              Email: <a href="mailto:jackpepperfarms@gmail.com" className="text-green-600 hover:underline">jackpepperfarms@gmail.com</a>
+              Email:{" "}
+              <a
+                href="mailto:jackpepperfarms@gmail.com"
+                className="text-green-600 hover:underline"
+              >
+                jackpepperfarms@gmail.com
+              </a>
             </p>
           </div>
         </motion.div>

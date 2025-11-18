@@ -37,7 +37,7 @@ const AllProducts = () => {
       {/* Main Content Area with Sidebar */}
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
         {/* Sidebar for Category Navigation */}
-        <aside className="lg:w-1/4 sticky top-28 max-h-[calc(100vh-theme(space.28))] overflow-y-auto p-4 bg-gray-50 rounded-xl shadow-md hidden lg:block">
+        <aside className="lg:w-1/5 sticky top-28 max-h-[calc(100vh-theme(space.28))] overflow-y-auto p-4 bg-gray-50 rounded-xl shadow-md hidden lg:block">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Categories</h3>
           <nav>
             <ul className="space-y-2">

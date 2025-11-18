@@ -18,6 +18,27 @@ import Image18 from "../assets/Images/18.jpg";
 import Image19 from "../assets/Images/19.jpg";
 import Image20 from "../assets/Images/20.jpg";
 import Image21 from "../assets/Images/21.jpg";
+
+// Banner images for product detail page
+import MoringaCapsulesBanner from "../assets/Bannerimages/moringacapsulesbanner.jpg";
+import TurmericMoringaCapsulesBanner from "../assets/Bannerimages/turmericmoringacapsules.jpg";
+import BlackPepperBanner from "../assets/Bannerimages/blackpepperbanner.jpg";
+import OrganicMoringaPowderBanner from "../assets/Bannerimages/organicmoringapowdercapsules.jpg";
+import GreenJackfruitPowderBanner from "../assets/Bannerimages/greenjackfruitpowderbanner.jpg";
+import JackfruitPowderBanner from "../assets/Bannerimages/jackfruitpowderbanner.jpg";
+import CashewBanner from "../assets/Bannerimages/cashewbanner.jpg";
+import CardamomBanner from "../assets/Bannerimages/cardamombanner.jpg";
+import JapathiBanner from "../assets/Bannerimages/japathribanner.jpg";
+import MakhotaDevaBanner from "../assets/Bannerimages/makhotadevabanner.jpg";
+import ClovesBanner from "../assets/Bannerimages/moringacapsulesbanner.jpg";
+import NutmegBanner from "../assets/Bannerimages/drynutmegbanner.jpg";
+import CinnamonBanner from "../assets/Bannerimages/moringacapsulesbanner.jpg";
+import DryGingerBanner from "../assets/Bannerimages/drygingerpowderbanner.jpg";
+import ClovesPowderBanner from "../assets/Bannerimages/moringacapsulesbanner.jpg";
+import BlackPepperPowderBanner from "../assets/Bannerimages/blackpepperbanner.jpg";
+import DryGingerPowderBanner from "../assets/Bannerimages/drygingerpowderbanner.jpg";
+import NutmegPowderBanner from "../assets/Bannerimages/drynutmegbanner.jpg";
+import CinnamonPowderBanner from "../assets/Bannerimages/cinnamonpowder.jpg";
 // Image URLs from user upload, hosted for convenience
 export const imageUrls = {
   moringaCapsules: Image2,
@@ -43,6 +64,26 @@ export const imageUrls = {
   ginger: Image19,
   nutmegPowder: Image20,
   clovesPowder: Image21,
+  // Banner images for product detail page
+  moringaCapsulesBanner: MoringaCapsulesBanner,
+  turmericMoringaCapsulesBanner: TurmericMoringaCapsulesBanner,
+  blackPepperBanner: BlackPepperBanner,
+  organicMoringaPowderBanner: OrganicMoringaPowderBanner,
+  greenJackfruitPowderBanner: GreenJackfruitPowderBanner,
+  jackfruitPowderBanner: JackfruitPowderBanner,
+  cashewBanner: CashewBanner,
+  cardamomBanner: CardamomBanner,
+  japathiBanner: JapathiBanner,
+  makhotaDevaBanner: MakhotaDevaBanner,
+  clovesBanner: ClovesBanner,
+  nutmegBanner: NutmegBanner,
+  cinnamonBanner: CinnamonBanner,
+  dryGingerBanner: DryGingerBanner,
+  clovesPowderBanner: ClovesPowderBanner,
+  blackPepperPowderBanner: BlackPepperPowderBanner,
+  dryGingerPowderBanner: DryGingerPowderBanner,
+  nutmegPowderBanner: NutmegPowderBanner,
+  cinnamonPowderBanner: CinnamonPowderBanner,
 };
 
 export const LOGO_URL = imageUrls.logo;
@@ -68,6 +109,7 @@ export const products = [
     offerPrice: "₹399",
     quantity: "120NO",
     imageUrl: imageUrls.moringaCapsules,
+    bannerImageUrl: imageUrls.moringaCapsulesBanner,
     description:
       "Packed with essential nutrients, our Organic Moringa Leaf Capsules are a natural energy booster and support overall wellness. A miracle superfood in a convenient capsule.",
     category: "Wellness Products",
@@ -79,7 +121,8 @@ export const products = [
     mrp: "₹499",
     offerPrice: "₹399",
     quantity: "60 NO + 60 NO",
-    imageUrl: imageUrls.turmericMoringaCapsules, // Using existing image, consider a bundle specific image
+    imageUrl: imageUrls.turmericMoringaCapsules,
+    bannerImageUrl: imageUrls.turmericMoringaCapsulesBanner,
     description:
       "A powerful combination of Turmeric and Organic Moringa capsules for enhanced health benefits.",
     category: "Wellness Products",
@@ -92,6 +135,7 @@ export const products = [
     offerPrice: "₹249",
     quantity: "200gm",
     imageUrl: imageUrls.blackPepperWhole,
+    bannerImageUrl: imageUrls.blackPepperBanner,
     description:
       "Sourced from our own organic farm, these whole black peppercorns are rich in piperine. They help detoxify the liver, prevent radical damage, and boost metabolism.",
     category: "Wellness Products",
@@ -104,6 +148,7 @@ export const products = [
     offerPrice: "₹249",
     quantity: "200gm",
     imageUrl: imageUrls.moringaPowder,
+    bannerImageUrl: imageUrls.organicMoringaPowderBanner,
     description:
       "A versatile superfood, our Organic Moringa Leaf Powder is an energy booster that supports skin health and enhances skin radiance. Mix it into your favorite drinks or meals.",
     category: "Wellness Products",
@@ -116,6 +161,7 @@ export const products = [
     offerPrice: "₹249",
     quantity: "350gm",
     imageUrl: imageUrls.greenJackfruitPowder,
+    bannerImageUrl: imageUrls.greenJackfruitPowderBanner,
     description:
       "Our Green Jackfruit Powder is a nutritious powerhouse, rich in protein and soluble fiber. It's an excellent, low-glycemic alternative to traditional flours for a healthy lifestyle.",
     category: "Wellness Products",
@@ -128,6 +174,7 @@ export const products = [
     offerPrice: "₹249",
     quantity: "200gm",
     imageUrl: imageUrls.jackfruitPodPowder,
+    bannerImageUrl: imageUrls.jackfruitPowderBanner,
     description:
       "Made from ripe jackfruit pods, this powder is rich in dietary fiber, protein, and soluble fiber. A naturally sweet and healthy addition to your smoothies, desserts, and baked goods.",
     category: "Wellness Products",
@@ -140,6 +187,7 @@ export const products = [
     offerPrice: "₹249",
     quantity: "150gm",
     imageUrl: imageUrls.cashews,
+    bannerImageUrl: imageUrls.cashewBanner,
     description:
       "Enjoy our premium W.240 grade cashewnuts. They are large, crunchy, and have a rich, buttery flavor. A healthy snack that boosts the immune system and improves bone health.",
     category: "Wellness Products",
@@ -152,6 +200,7 @@ export const products = [
     offerPrice: "90",
     quantity: "20gm",
     imageUrl: imageUrls.cardamom,
+    bannerImageUrl: imageUrls.cardamomBanner,
     description:
       "Our premium green cardamom pods are highly aromatic with a complex flavor profile that is citrusy, minty, spicy, and herbal all at once. A prized spice in global cuisine.",
     category: "Spices",
@@ -164,6 +213,7 @@ export const products = [
     offerPrice: "₹90",
     quantity: "25gm",
     imageUrl: imageUrls.mace,
+    bannerImageUrl: imageUrls.japathiBanner,
     description:
       "Mace is the lacy covering of the nutmeg seed, offering a more delicate flavor. It adds a warm, spicy-sweet note to baked goods, savory dishes, and spice blends.",
     category: "Spices",
@@ -176,6 +226,7 @@ export const products = [
     offerPrice: "₹90",
     quantity: "50gm",
     imageUrl: imageUrls.clovesWhole,
+    bannerImageUrl: imageUrls.clovesBanner,
     description:
       "Hand-picked for their size and oil content, our whole cloves offer a strong, pungent, and sweet flavor. Perfect for studding meats, flavoring sauces, and pickling.",
     category: "Spices",
@@ -188,6 +239,7 @@ export const products = [
     offerPrice: "₹90",
     quantity: "100gm",
     imageUrl: imageUrls.nutmeg,
+    bannerImageUrl: imageUrls.nutmegBanner,
     description:
       "Sourced from the high ranges of the Western Ghats, our premium nutmeg adds a warm, sweet, and aromatic flavor to both sweet and savory dishes. A must-have for every kitchen.",
     category: "Spices",
@@ -200,6 +252,7 @@ export const products = [
     offerPrice: "₹90",
     quantity: "100gm",
     imageUrl: imageUrls.cinnamonSticks,
+    bannerImageUrl: imageUrls.cinnamonBanner,
     description:
       "Sourced from the Western Ghats, these whole cinnamon sticks release a sweet and delicate aroma. Ideal for infusing flavor into drinks, stews, and desserts.",
     category: "Spices",
@@ -211,7 +264,8 @@ export const products = [
     mrp: "₹120", // Using previous price as MRP
     offerPrice: "₹90",
     quantity: "100gm",
-    imageUrl: imageUrls.ginger, // Using powder image for dry ginger
+    imageUrl: imageUrls.ginger,
+    bannerImageUrl: imageUrls.dryGingerBanner,
     description:
       "Our Dry Ginger offers a pungent, spicy-sweet flavor and aroma. It's a versatile spice, perfect for baking, marinades, and traditional remedies.",
     category: "Spices",
@@ -235,6 +289,7 @@ export const products = [
     offerPrice: "₹75",
     quantity: "30gm",
     imageUrl: imageUrls.clovesPowder,
+    bannerImageUrl: imageUrls.clovesPowderBanner,
     description:
       "Our Cloves Powder has an intense, sweet, and pungent flavor. A versatile spice used in baking, cooking, and traditional spice blends for its distinctive taste and aroma.",
     category: "Powders",
@@ -247,6 +302,7 @@ export const products = [
     offerPrice: "₹75",
     quantity: "40gm",
     imageUrl: imageUrls.blackPepperPowder,
+    bannerImageUrl: imageUrls.blackPepperPowderBanner,
     description:
       "Finely ground from premium quality black peppercorns, this powder delivers a sharp, pungent heat that enhances the flavor of any dish. A staple for seasoning and cooking.",
     category: "Powders",
@@ -259,6 +315,7 @@ export const products = [
     offerPrice: "₹75",
     quantity: "50gm",
     imageUrl: imageUrls.gingerPowder,
+    bannerImageUrl: imageUrls.dryGingerPowderBanner,
     description:
       "Our Dry Ginger Powder offers a pungent, spicy-sweet flavor and aroma. It's a versatile spice, perfect for baking, marinades, and traditional remedies.",
     category: "Powders",
@@ -270,7 +327,8 @@ export const products = [
     mrp: "₹99", // Using previous price as MRP
     offerPrice: "₹75",
     quantity: "50gm",
-    imageUrl: imageUrls.nutmegPowder, // Assuming this image is suitable for powder
+    imageUrl: imageUrls.nutmegPowder,
+    bannerImageUrl: imageUrls.nutmegPowderBanner,
     description:
       "Finely ground from premium quality nutmeg, this powder adds a warm, sweet, and aromatic flavor to both sweet and savory dishes.",
     category: "Powders",
@@ -283,6 +341,7 @@ export const products = [
     offerPrice: "₹75",
     quantity: "50gm",
     imageUrl: imageUrls.cinnamonPowder,
+    bannerImageUrl: imageUrls.cinnamonPowderBanner,
     description:
       "Experience the sweet, woody, and fragrant aroma of our premium Cinnamon Powder. Perfect for desserts, beverages, and savory dishes, adding a touch of warmth and complexity.",
     category: "Powders",
