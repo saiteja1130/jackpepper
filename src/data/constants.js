@@ -24,6 +24,8 @@ import Image21 from "../assets/Images/21.jpg";
 import MoringaCapsulesBanner from "../assets/Bannerimages/moringacapsulesbanner.jpeg";
 import TurmericMoringaCapsulesBanner from "../assets/Bannerimages/turmericmoringacapsules.jpg";
 import BlackPepperBanner from "../assets/Bannerimages/blackpepperbanner.jpeg";
+import BlackPepperPowderBanner from "../assets/Bannerimages/blackpepperpowderbanner.jpg";
+
 import OrganicMoringaPowderBanner from "../assets/Bannerimages/organicmoringapowdercapsules.jpg";
 import GreenJackfruitPowderBanner from "../assets/Bannerimages/greenjackfruitpowderbanner.jpg";
 import JackfruitPowderBanner from "../assets/Bannerimages/jackfruitpowderbanner.jpg";
@@ -35,11 +37,10 @@ import ClovesBanner from "../assets/Bannerimages/clovesbanner.jpeg";
 import NutmegBanner from "../assets/Bannerimages/drynutmegbanner.jpg";
 import CinnamonBanner from "../assets/Bannerimages/moringacapsulesbanner.jpeg";
 import DryGingerBanner from "../assets/Bannerimages/drygingerpowderbanner.jpg";
-import ClovesPowderBanner from "../assets/Bannerimages/moringacapsulesbanner.jpeg";
-import BlackPepperPowderBanner from "../assets/Bannerimages/blackpepperbanner.jpeg";
+import ClovesPowderBanner from "../assets/Bannerimages/clovespowderbanner.jpg";
 import DryGingerPowderBanner from "../assets/Bannerimages/drygingerpowderbanner.jpg";
 import NutmegPowderBanner from "../assets/Bannerimages/drynutmegbanner.jpg";
-import CinnamonPowderBanner from "../assets/Bannerimages/cinnamonpowder.jpg";
+import CinnamonPowderBanner from "../assets/Bannerimages/cinnamonpowderbanner.jpg";
 // Image URLs from user upload, hosted for convenience
 export const imageUrls = {
   moringaCapsules: Image2,
