@@ -29,6 +29,14 @@ const Home = () => {
     },
   };
 
+  const scrollText = `
+    All orders above Rs 750 free delivery. | 
+    Below Rs 60 courier charges. | 
+    All orders above Rs 1500 discount of 5% plus free delivery. | 
+    5% GST extra on all products except jackfruit items. | 
+    Complimentary farm fresh sample Turmeric powder with all orders.
+  `;
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -37,20 +45,21 @@ const Home = () => {
       transition={{ duration: 0.5 }}
       className="font-body"
     >
-      <div class="w-full py-2.5 font-medium text-sm text-white bg-linear-to-r from-green-400 via-green-500 to-green-600">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 text-center">
-          <p>All orders above Rs 750 free delivery.</p>
-          <span class="hidden sm:inline">|</span>
-          <p>Below Rs 60 courier charges.</p>
-          <span class="hidden sm:inline">|</span>
-          <p>All orders above Rs 1500 discount of 5% plus free delivery.</p>
-          <span class="hidden sm:inline">|</span>
-          <p>5% GST extra on all products except jackfruit items.</p>
-          <span class="hidden sm:inline">|</span>
-          <p>
-            Complimentary farm fresh sample Turmeric powder with all orders.
-          </p>
-        </div>
+      <div className="w-full py-2.5 font-medium text-sm text-white bg-linear-to-r from-green-400 via-green-500 to-green-600 overflow-hidden">
+        <motion.div
+          className="flex whitespace-nowrap"
+          animate={{ x: ["100%", "-100%"] }} // move from right to left
+          transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 20, // adjust speed here
+            ease: "linear",
+          }}
+        >
+          <span className="mx-4">{scrollText}</span>
+          <span className="mx-4">{scrollText}</span>{" "}
+          {/* duplicate for smooth infinite scroll */}
+        </motion.div>
       </div>
 
       {/* ====================== HERO SECTION ======================== */}
