@@ -1,15 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { WHATSAPP_NUMBER, GENERAL_ENQUIRY_MESSAGE } from '../data/constants.js';
-import { WhatsAppIcon } from './icons/WhatsAppIcon.jsx';
+import React from "react";
+import { motion } from "framer-motion";
+import { WHATSAPP_NUMBER, GENERAL_ENQUIRY_MESSAGE } from "../data/constants.js";
+import { WhatsAppIcon } from "./icons/WhatsAppIcon.jsx";
 
 const WhatsAppButton = ({ productName }) => {
   const message = productName
     ? `Hello, I'm interested in your product: ${productName}.`
     : GENERAL_ENQUIRY_MESSAGE;
 
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-  
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    message
+  )}`;
+
   const isProductPage = !!productName;
 
   if (isProductPage) {
@@ -21,9 +23,9 @@ const WhatsAppButton = ({ productName }) => {
         className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl"
       >
         <WhatsAppIcon className="w-6 h-6" />
-        <span className="text-lg">Enquire on WhatsApp</span>
+        <span className="text-lg font-roboto">Enquire on WhatsApp</span>
       </a>
-    )
+    );
   }
 
   return (
@@ -36,7 +38,7 @@ const WhatsAppButton = ({ productName }) => {
       whileTap={{ scale: 0.95 }}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.5 }}
+      transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.5 }}
       aria-label="Contact us on WhatsApp"
     >
       <WhatsAppIcon className="w-7 h-7" />

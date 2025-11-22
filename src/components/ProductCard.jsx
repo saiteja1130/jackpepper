@@ -5,12 +5,16 @@ import { motion } from "framer-motion";
 const ProductCard = ({ product }) => {
   return (
     <motion.div
-      whileHover={{ y: -5, scale: 1.02, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
+      whileHover={{
+        y: -5,
+        scale: 1.02,
+        boxShadow:
+          "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      }}
       transition={{ duration: 0.3 }}
       className="group w-full bg-white rounded-2xl overflow-hidden cursor-pointer
                  border border-green-200 hover:border-green-400
-                 shadow-sm transition-all duration-300
-                 font-inter" // 👈 added font family
+                 shadow-sm transition-all duration-300"
     >
       <Link to={`/product/${product.id}`}>
         {/* Image Container */}
@@ -26,22 +30,28 @@ const ProductCard = ({ product }) => {
         </div>
 
         {/* Text Content */}
-        <div className="p-2 flex flex-col items-start sm:items-center text-center gap-1 font-inter">
-          <p className="text-sm sm:text-base text-gray-900 font-medium truncate w-full">
+        <div className="p-2 flex flex-col items-start sm:items-center text-center gap-1">
+          {/* Product Name */}
+          <p className="text-sm sm:text-base text-gray-900 font-medium truncate w-full font-merriweather">
             {product.name}
           </p>
 
+          {/* Price */}
           <div className="flex items-center gap-2">
             {product.mrp !== product.offerPrice && (
-              <p className="text-sm text-gray-500 line-through">
+              <p className="text-sm text-gray-500 line-through font-roboto">
                 {product.mrp}
               </p>
             )}
-            <p className="text-base sm:text-lg text-green-600 font-bold whitespace-nowrap">
+            <p className="text-base sm:text-lg text-green-600 font-bold whitespace-nowrap font-roboto">
               {product.offerPrice}
             </p>
           </div>
-          <p className="text-xs text-gray-500">{product.quantity}</p>
+
+          {/* Quantity */}
+          <p className="text-xs text-gray-500 font-roboto">
+            {product.quantity}
+          </p>
         </div>
       </Link>
     </motion.div>

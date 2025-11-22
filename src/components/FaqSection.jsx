@@ -10,11 +10,10 @@ const FaqSection = () => {
       answer:
         "We supply premium-quality Black Pepper, White Pepper, Green Pepper, Pink Pepper, King Pepper, and a variety of farm-fresh pepper products sourced directly from our plantations.",
     },
-
     {
       question: "Are your products organic and naturally grown?",
       answer:
-        "All our Products are grown using natural farming practices without harmful chemicals.To ensure abundant supply of organic manure we maintain own dairy farm..",
+        "All our Products are grown using natural farming practices without harmful chemicals. To ensure abundant supply of organic manure we maintain our own dairy farm.",
     },
     {
       question: "Do you provide PAN India shipping?",
@@ -37,19 +36,19 @@ const FaqSection = () => {
 
         {/* RIGHT CONTENT */}
         <div className="md:w-1/2 w-full">
-          <p className="text-green-600 text-sm font-semibold tracking-wide">
+          <p className="text-green-600 text-sm font-semibold tracking-wide font-roboto">
             FREQUENTLY ASKED QUESTIONS
           </p>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-roboto font-bold text-gray-900 mt-2 leading-tight">
             Everything You Need to Know
           </h1>
 
-          <p className="text-slate-500 mt-3 mb-6 text-sm">
+          <p className="text-slate-500 mt-3 mb-6 text-sm font-roboto">
             Learn more about our premium-quality wellness products like Moringa
-            capsules, Moringa leaf powder,Black pepper, Jackfruit products,
-            premium Cashewnuts and select spices sourced from hightsnges of
-            western ghats..
+            capsules, Moringa leaf powder, Black pepper, Jackfruit products,
+            premium Cashewnuts, and select spices sourced from high ranges of
+            western ghats.
           </p>
 
           {faqs.map((faq, index) => (
@@ -60,7 +59,7 @@ const FaqSection = () => {
             >
               {/* Question Row */}
               <div className="flex items-center justify-between">
-                <h3 className="text-base md:text-lg font-medium text-gray-800">
+                <h3 className="text-base md:text-lg font-merriweather font-medium text-gray-800">
                   {faq.question}
                 </h3>
 
@@ -93,7 +92,7 @@ const FaqSection = () => {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed font-roboto">
                   {faq.answer}
                 </p>
               </div>

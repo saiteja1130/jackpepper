@@ -10,10 +10,7 @@ const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -37,19 +34,14 @@ const Header = () => {
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+          {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            {/* Logo Image */}
             <img
               src={LOGO_URL}
               alt="Jack Pepper Farms Logo"
               className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
             />
-
-            {/* Brand Text with font-organic */}
-            <p
-              className="text-xl sm:text-2xl font-organic tracking-tight 
-                  text-gray-900 group-hover:text-green-600 transition-colors duration-300"
-            >
+            <p className="text-xl sm:text-2xl font-lobster tracking-tight text-gray-900 group-hover:text-green-600 transition-colors duration-300">
               Jack <span className="text-green-600">Pepper</span> Farms
             </p>
           </Link>
@@ -58,18 +50,21 @@ const Header = () => {
           <div className="hidden lg:flex items-center justify-center gap-8">
             <Link
               to="/"
-              className={`${navLinkClass} font-heading ${
+              className={`${navLinkClass} font-merriweather ${
                 location.pathname === "/" ? activeNavLinkClass : ""
               }`}
             >
               Home
             </Link>
-            <Link to="/products" className={`${navLinkClass} font-heading`}>
+            <Link to="/products" className={`${navLinkClass} font-merriweather`}>
               Products
             </Link>
-            <Link to="/about-us" className={`${navLinkClass} font-heading ${
+            <Link
+              to="/about-us"
+              className={`${navLinkClass} font-merriweather ${
                 location.pathname === "/about-us" ? activeNavLinkClass : ""
-              }`}>
+              }`}
+            >
               About Us
             </Link>
 
@@ -77,10 +72,10 @@ const Header = () => {
             <div className="hidden md:flex items-center">
               <a
                 href={`tel:${PHONE_NUMBER}`}
-                className="flex items-center gap-2 px-6 py-2 bg-green-600 text-white font-bold font-body rounded-lg hover:bg-green-700 transition duration-300 shadow-lg"
+                className="flex items-center gap-2 px-6 py-2 bg-green-600 text-white font-roboto font-bold rounded-lg hover:bg-green-700 transition duration-300 shadow-lg"
               >
                 <PhoneIcon className="w-4 h-4" />
-                <span>Call Now</span>
+                <span className="font-merriweather">Call Now</span>
               </a>
             </div>
           </div>
@@ -89,7 +84,7 @@ const Header = () => {
           <div className="md:hidden flex items-center space-x-2">
             <a
               href={`tel:${PHONE_NUMBER}`}
-              className="flex items-center gap-1 px-3 py-2 bg-green-600 text-white font-bold font-body rounded-lg hover:bg-green-700 transition text-sm shadow-lg"
+              className="flex items-center gap-1 px-3 py-2 bg-green-600 text-white font-roboto font-bold rounded-lg hover:bg-green-700 transition text-sm shadow-lg"
             >
               <PhoneIcon className="w-4 h-4" />
               <span>Call</span>
@@ -133,24 +128,23 @@ const Header = () => {
             <div className="px-4 pt-2 pb-4">
               <Link
                 to="/"
-                className={`${mobileNavLinkClass} ${navLinkClass} font-heading ${
+                className={`${mobileNavLinkClass} ${navLinkClass} font-merriweather ${
                   location.pathname === "/" ? activeNavLinkClass : ""
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
-
               <Link
                 to="/products"
-                className={`${mobileNavLinkClass} ${navLinkClass} font-heading`}
+                className={`${mobileNavLinkClass} ${navLinkClass} font-merriweather`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
               </Link>
               <Link
                 to="/about-us"
-                className={`${mobileNavLinkClass} ${navLinkClass} font-heading ${
+                className={`${mobileNavLinkClass} ${navLinkClass} font-merriweather ${
                   location.pathname === "/about-us" ? activeNavLinkClass : ""
                 }`}
                 onClick={() => setIsMenuOpen(false)}
