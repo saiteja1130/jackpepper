@@ -1,5 +1,6 @@
 import Logo from "../assets/Images/logo1.jpg";
-import Image2 from "../assets/Images/2.jpg";
+import Image2 from "../assets/Images/2.1.jpeg";
+import Image22 from "../assets/Images/2.jpg";
 import Image3 from "../assets/Images/3.jpg";
 import Image4 from "../assets/Images/4.jpg";
 import Image5 from "../assets/Images/5.jpg";
@@ -20,22 +21,22 @@ import Image20 from "../assets/Images/20.jpg";
 import Image21 from "../assets/Images/21.jpg";
 
 // Banner images for product detail page
-import MoringaCapsulesBanner from "../assets/Bannerimages/moringacapsulesbanner.jpg";
+import MoringaCapsulesBanner from "../assets/Bannerimages/moringacapsulesbanner.jpeg";
 import TurmericMoringaCapsulesBanner from "../assets/Bannerimages/turmericmoringacapsules.jpg";
-import BlackPepperBanner from "../assets/Bannerimages/blackpepperbanner.jpg";
+import BlackPepperBanner from "../assets/Bannerimages/blackpepperbanner.jpeg";
 import OrganicMoringaPowderBanner from "../assets/Bannerimages/organicmoringapowdercapsules.jpg";
 import GreenJackfruitPowderBanner from "../assets/Bannerimages/greenjackfruitpowderbanner.jpg";
 import JackfruitPowderBanner from "../assets/Bannerimages/jackfruitpowderbanner.jpg";
 import CashewBanner from "../assets/Bannerimages/cashewbanner.jpg";
 import CardamomBanner from "../assets/Bannerimages/cardamombanner.jpg";
-import JapathiBanner from "../assets/Bannerimages/japathribanner.jpg";
+import JapathiBanner from "../assets/Bannerimages/japathribanner.jpeg";
 import MakhotaDevaBanner from "../assets/Bannerimages/makhotadevabanner.jpg";
-import ClovesBanner from "../assets/Bannerimages/moringacapsulesbanner.jpg";
+import ClovesBanner from "../assets/Bannerimages/clovesbanner.jpeg";
 import NutmegBanner from "../assets/Bannerimages/drynutmegbanner.jpg";
-import CinnamonBanner from "../assets/Bannerimages/moringacapsulesbanner.jpg";
+import CinnamonBanner from "../assets/Bannerimages/moringacapsulesbanner.jpeg";
 import DryGingerBanner from "../assets/Bannerimages/drygingerpowderbanner.jpg";
-import ClovesPowderBanner from "../assets/Bannerimages/moringacapsulesbanner.jpg";
-import BlackPepperPowderBanner from "../assets/Bannerimages/blackpepperbanner.jpg";
+import ClovesPowderBanner from "../assets/Bannerimages/moringacapsulesbanner.jpeg";
+import BlackPepperPowderBanner from "../assets/Bannerimages/blackpepperbanner.jpeg";
 import DryGingerPowderBanner from "../assets/Bannerimages/drygingerpowderbanner.jpg";
 import NutmegPowderBanner from "../assets/Bannerimages/drynutmegbanner.jpg";
 import CinnamonPowderBanner from "../assets/Bannerimages/cinnamonpowder.jpg";
@@ -48,7 +49,7 @@ export const imageUrls = {
   blackPepper: Image12,
   blackPepperPowder: Image17,
   cinnamonPowder: Image18,
-  cinnamonSticks: Image2,
+  cinnamonSticks: Image22,
   clovesWhole: Image3,
   japathri: Image4,
   mace: Image10,
@@ -163,7 +164,7 @@ export const products = [
     imageUrl: imageUrls.greenJackfruitPowder,
     bannerImageUrl: imageUrls.greenJackfruitPowderBanner,
     description:
-      "Our Green Jackfruit Powder is a nutritious powerhouse, rich in protein and soluble fiber. It's an excellent, low-glycemic alternative to traditional flours for a healthy lifestyle.",
+      "Our Green Jackfruit Powder is a nutritious powerhouse, sourced from our own organic farm, and is rich in protein and soluble fiber. It's an excellent, low-glycemic alternative to traditional flours for a healthy lifestyle. It can be mixed with wheat and rice flour, puttupodi, idli/dosa batter, etc.",
     category: "Wellness Products",
     gstRate: 0,
   },
@@ -176,7 +177,7 @@ export const products = [
     imageUrl: imageUrls.jackfruitPodPowder,
     bannerImageUrl: imageUrls.jackfruitPowderBanner,
     description:
-      "Made from ripe jackfruit pods, this powder is rich in dietary fiber, protein, and soluble fiber. A naturally sweet and healthy addition to your smoothies, desserts, and baked goods.",
+      "Made from semi-ripe jackfruit pods,sourced from our own organic farm, this powder is rich in dietary fiber, protein, and soluble fiber. It is a naturally healthy addition to your smoothies, desserts, and baked goods. It can also be mixed with wheat and rice flour, puttupodi, and idli/dosa batter.",
     category: "Wellness Products",
     gstRate: 0,
   },
@@ -193,6 +194,7 @@ export const products = [
     category: "Wellness Products",
     gstRate: 5,
   },
+  
   {
     id: 8,
     name: "Cardamom",
@@ -212,7 +214,7 @@ export const products = [
     mrp: "₹120", // Using previous price as MRP
     offerPrice: "₹90",
     quantity: "25gm",
-    imageUrl: imageUrls.mace,
+    imageUrl: imageUrls.japathri,
     bannerImageUrl: imageUrls.japathiBanner,
     description:
       "Mace is the lacy covering of the nutmeg seed, offering a more delicate flavor. It adds a warm, spicy-sweet note to baked goods, savory dishes, and spice blends.",
@@ -356,6 +358,19 @@ export const products = [
     imageUrl: imageUrls.logo, // Placeholder image
     description: "A special combo pack of five essential spice powders.",
     category: "Bundles",
+    gstRate: 5,
+  },
+  {
+    id: 21,
+    name: "Mahkota Dewa",
+    mrp: "₹299", // Using previous price as MRP
+    offerPrice: "₹249",
+    quantity: "50gm",
+    imageUrl: imageUrls.mahkotaDewa,
+    bannerImageUrl: imageUrls.makhotaDevaBanner,
+    description:
+      "Mahkota Dewa, also known as the ‘God’s Crown’ fruit, is valued for its natural wellness benefits. Traditionally used for boosting immunity and supporting overall health, it is rich in antioxidants and bioactive compounds. A powerful herbal supplement to help maintain vitality and balance in your daily routine.",
+    category: "Wellness Products",
     gstRate: 5,
   },
 ];

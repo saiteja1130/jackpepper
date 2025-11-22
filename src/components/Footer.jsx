@@ -21,18 +21,48 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex justify-center gap-6 mt-6 md:mt-8 text-white/80 text-lg">
-          <Link to="/about-us" className="hover:text-white transition-colors duration-300">
-            About Us
-          </Link>
-          {/* <Link to="/return-policy" className="hover:text-white transition-colors duration-300">
-            Return Policy
-          </Link> */}
+       
+        {/* Two Sections Wrapper */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 text-white/80 text-sm md:text-base text-left md:text-center px-4 md:px-20">
+
+          {/* Address Section */}
+          <div>
+            <h3 className="text-white text-lg font-semibold mb-2">Address</h3>
+            <p>
+              jackpepperfarms,<br />
+              T-17, Saigreens, Babusapalaya,<br />
+              Kalyan Nagar,<br />
+              Bangalore 560043.
+            </p>
+          </div>
+
+          {/* Contact Section */}
+          <div>
+            <h3 className="text-white text-lg font-semibold mb-2">Contact Us</h3>
+            <p>Mob: 8073781750, 8050939719</p>
+            <p className="mt-1">
+              Email:{" "}
+              <a href="mailto:jackpepperfarms@gmail.com" className="hover:text-white">
+                jackpepperfarms@gmail.com
+              </a>
+            </p>
+            <p className="mt-1">
+              Website:{" "}
+              <a
+                href="https://jackpepperfarms.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                jackpepperfarms.com
+              </a>
+            </p>
+          </div>
+
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex justify-center gap-6 mt-6 md:mt-8 text-white">
-          
+        <div className="flex justify-center gap-6 mt-10 text-white">
           <a
             href="#"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
@@ -53,7 +83,6 @@ const Footer = () => {
           >
             <FaTwitter className="h-5 w-5" />
           </a>
-
         </div>
 
         {/* Copyright */}
