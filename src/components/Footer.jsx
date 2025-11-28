@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-10 md:py-14">
       <div className="container mx-auto px-4 text-center">
-        
+
         {/* Logo + Brand Name */}
         <div className="flex flex-col items-center">
           <img
@@ -65,25 +65,27 @@ const Footer = () => {
         {/* Social Media Icons */}
         <div className="flex justify-center gap-6 mt-10 text-white">
           <a
-            href="#"
+            href="https://www.facebook.com/share/1Bn7bWoGR1/"
+            target="_blank"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
           >
             <FaFacebookF className="h-5 w-5" />
           </a>
 
           <a
-            href="#"
+            href="https://www.instagram.com/jackpepperfarm?igsh=MTc1Yml5NzB0em5jeA=="
+            target="_blank"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
           >
             <FaInstagram className="h-5 w-5" />
           </a>
 
-          <a
+          {/* <a
             href="#"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
           >
             <FaTwitter className="h-5 w-5" />
-          </a>
+          </a> */}
         </div>
 
         {/* Copyright */}

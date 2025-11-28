@@ -19,6 +19,9 @@ import Image18 from "../assets/Images/18.jpg";
 import Image19 from "../assets/Images/19.jpg";
 import Image20 from "../assets/Images/20.jpg";
 import Image21 from "../assets/Images/21.jpg";
+import Image23 from '../assets/Images/nutmeg.jpg'
+import Image24 from '../assets/Images/dryginger.jpg'
+import Image25 from '../assets/Images/nutmegpowder.jpg'
 
 // Banner images for product detail page
 import MoringaCapsulesBanner from "../assets/Bannerimages/moringacapsulesbanner.jpeg";
@@ -45,7 +48,7 @@ import CinnamonPowderBanner from "../assets/Bannerimages/cinnamonpowderbanner.jp
 export const imageUrls = {
   moringaCapsules: Image2,
   logo: Logo,
-  nutmeg: Image15,
+  nutmeg: Image23,
   gingerPowder: Image16,
   blackPepper: Image12,
   blackPepperPowder: Image17,
@@ -63,8 +66,8 @@ export const imageUrls = {
   blackPepperWhole: Image12,
   turmericMoringaCapsules: Image13,
   turmericMoringaLeafrCapsules: Image14,
-  ginger: Image19,
-  nutmegPowder: Image20,
+  ginger: Image24,
+  nutmegPowder: Image25,
   clovesPowder: Image21,
   // Banner images for product detail page
   moringaCapsulesBanner: MoringaCapsulesBanner,
@@ -116,6 +119,7 @@ export const products = [
       "Packed with essential nutrients, our Organic Moringa Leaf Capsules are a natural energy booster and support overall wellness. A miracle superfood in a convenient capsule.",
     category: "Wellness Products",
     gstRate: 5,
+    isshow  :true
   },
   {
     id: 2,
@@ -142,6 +146,7 @@ export const products = [
       "Sourced from our own organic farm, these whole black peppercorns are rich in piperine. They help detoxify the liver, prevent radical damage, and boost metabolism.",
     category: "Wellness Products",
     gstRate: 5,
+    isshow: true,
   },
   {
     id: 4,
@@ -152,9 +157,10 @@ export const products = [
     imageUrl: imageUrls.moringaPowder,
     bannerImageUrl: imageUrls.organicMoringaPowderBanner,
     description:
-      "A versatile superfood, our Organic Moringa Leaf Powder is an energy booster that supports skin health and enhances skin radiance. Mix it into your favorite drinks or meals.",
+      "A versatile superfood, our Organic Moringa Leaf Powder is an energy booster that supports skin health and enhances skin radiance. Can be mixed with fresh lime juice and luke warm water or add to oats or smoothie.",
     category: "Wellness Products",
     gstRate: 5,
+    isshow:true
   },
   {
     id: 5,
@@ -165,9 +171,10 @@ export const products = [
     imageUrl: imageUrls.greenJackfruitPowder,
     bannerImageUrl: imageUrls.greenJackfruitPowderBanner,
     description:
-      "Our Green Jackfruit Powder is a nutritious powerhouse, sourced from our own organic farm, and is rich in protein and soluble fiber. It's an excellent, low-glycemic alternative to traditional flours for a healthy lifestyle. It can be mixed with wheat and rice flour, puttupodi, idli/dosa batter, etc.",
+      "Our Green Jackfruit Powder is a nutritious powerhouse, sourced directly from our own organic farm , and is rich in protein and soluble fiber. It's an excellent, low-glycemic alternative to traditional flours for a healthy lifestyle. It can be mixed with wheat and rice flour, puttupodi, idli/dosa batter, etc.",
     category: "Wellness Products",
     gstRate: 0,
+    isshow:true
   },
   {
     id: 6,
@@ -178,9 +185,11 @@ export const products = [
     imageUrl: imageUrls.jackfruitPodPowder,
     bannerImageUrl: imageUrls.jackfruitPowderBanner,
     description:
-      "Made from semi-ripe jackfruit pods,sourced from our own organic farm, this powder is rich in dietary fiber, protein, and soluble fiber. It is a naturally healthy addition to your smoothies, desserts, and baked goods. It can also be mixed with wheat and rice flour, puttupodi, and idli/dosa batter.",
+      "Made from semi-ripe jackfruit pods,Sourced from Western ghats, this powder is rich in dietary fiber, protein, and soluble fiber. It is a naturally healthy addition to your smoothies, desserts, and baked goods. It can also be mixed with wheat and rice flour, puttupodi, and idli/dosa batter.",
     category: "Wellness Products",
     gstRate: 0,
+    isBestSeller: true,
+    isshow:true
   },
   {
     id: 7,
@@ -194,8 +203,9 @@ export const products = [
       "Enjoy our premium W.240 grade cashewnuts. They are large, crunchy, and have a rich, buttery flavor. A healthy snack that boosts the immune system and improves bone health.",
     category: "Wellness Products",
     gstRate: 5,
+    isBestSeller: true,
   },
-  
+
   {
     id: 8,
     name: "Cardamom",
@@ -229,7 +239,7 @@ export const products = [
     offerPrice: "₹90",
     quantity: "50gm",
     imageUrl: imageUrls.clovesWhole,
-    bannerImageUrl: imageUrls.clovesBanner,
+    // bannerImageUrl: imageUrls.clovesBanner,
     description:
       "Hand-picked for their size and oil content, our whole cloves offer a strong, pungent, and sweet flavor. Perfect for studding meats, flavoring sauces, and pickling.",
     category: "Spices",
@@ -255,9 +265,9 @@ export const products = [
     offerPrice: "₹90",
     quantity: "100gm",
     imageUrl: imageUrls.cinnamonSticks,
-    bannerImageUrl: imageUrls.cinnamonBanner,
+    // bannerImageUrl: imageUrls.cinnamonBanner,
     description:
-      "Sourced from the Western Ghats, these whole cinnamon sticks release a sweet and delicate aroma. Ideal for infusing flavor into drinks, stews, and desserts.",
+      "Sourced from the Western Ghats, these whole cinnamon sticks release a sweet and delicate aroma. Ideal for infusing flavor into drinks, stews, and desserts. controls Blood sugar effectively",
     category: "Spices",
     gstRate: 5,
   },
@@ -268,7 +278,7 @@ export const products = [
     offerPrice: "₹90",
     quantity: "100gm",
     imageUrl: imageUrls.ginger,
-    bannerImageUrl: imageUrls.dryGingerBanner,
+    // bannerImageUrl: imageUrls.dryGingerBanner,
     description:
       "Our Dry Ginger offers a pungent, spicy-sweet flavor and aroma. It's a versatile spice, perfect for baking, marinades, and traditional remedies.",
     category: "Spices",
@@ -307,9 +317,10 @@ export const products = [
     imageUrl: imageUrls.blackPepperPowder,
     bannerImageUrl: imageUrls.blackPepperPowderBanner,
     description:
-      "Finely ground from premium quality black peppercorns, this powder delivers a sharp, pungent heat that enhances the flavor of any dish. A staple for seasoning and cooking.",
+      "Sourced from our own organic farm and Finely ground from premium quality black peppercorns, this powder delivers a sharp, pungent heat that enhances the flavor of any dish. A staple for seasoning and cooking.",
     category: "Powders",
     gstRate: 5,
+    isshow:true
   },
   {
     id: 17,
@@ -373,5 +384,6 @@ export const products = [
       "Mahkota Dewa, also known as the ‘God’s Crown’ fruit, is valued for its natural wellness benefits. Traditionally used for boosting immunity and supporting overall health, it is rich in antioxidants and bioactive compounds. A powerful herbal supplement to help maintain vitality and balance in your daily routine.",
     category: "Wellness Products",
     gstRate: 5,
+    isBestSeller: true,
   },
 ];

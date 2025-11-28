@@ -24,7 +24,7 @@ const Home = () => {
 
   const scrollText = `
     All orders above Rs 750 free delivery. | 
-    Below Rs 60 courier charges. | 
+    Below Rs 70 courier charges. | 
     All orders above Rs 1500 discount of 5% plus free delivery. | 
     5% GST extra on all products except jackfruit items. | 
     Complimentary farm fresh sample Turmeric powder with all orders.
@@ -114,7 +114,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
-              { value: "17+", label: "Total Products" },
+              { value: "18+", label: "Total Products" },
               { value: "5000+", label: "Satisfied Clients" },
               { value: "50+", label: "Years of Trust" },
               { value: "100%", label: "Organic Guarantee" },
@@ -157,19 +157,22 @@ const Home = () => {
             </h2>
             <div className="mt-4 w-24 h-1.5 bg-green-600 mx-auto rounded-full"></div>
             <p className="mt-6 text-gray-600 text-base sm:text-lg max-w-xl mx-auto">
-              Discover our most popular spices, carefully selected for their
-              exceptional quality and flavor.
+              Discover our most popular Wellness products and spices, carefully
+              selected for their exceptional quality and flavor.
             </p>
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-8"
+            className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            {products.slice(0, 5).map((product) => (
+            {[
+              ...products.filter((item) => item.isBestSeller).slice(0, 5),
+              ...products.slice(8, 10),
+            ].map((product) => (
               <motion.div key={product.id} variants={itemVariants}>
                 <ProductCard product={product} />
               </motion.div>

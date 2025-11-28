@@ -20,6 +20,11 @@ const FaqSection = () => {
       answer:
         "Yes, we ship across India with fast delivery. Orders are safely packed to maintain freshness and quality during transit.",
     },
+    {
+      question: "What type of products do  you supply?",
+      answer:
+        "Our black pepper, jackfruit products, Moringa capsules and powder are sourced from our own organic farm. Other spices are sourced directly from farmers of western ghats..",
+    },
   ];
 
   return (

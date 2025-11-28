@@ -119,8 +119,11 @@ const ProductDetail = () => {
             <p className="text-base sm:text-lg">{product.description}</p>
 
             <p className="text-base sm:text-lg">
-              Naturally processed and sourced directly from farms of the Western
-              Ghats ensuring pure, fresh and chemical-free quality.
+              Naturally processed and sourced directly{" "}
+              {!product?.isshow
+                ? "from farms of the Western Ghats"
+                : "from our own organic farm"}{" "}
+              ensuring pure, fresh and chemical-free quality.
             </p>
 
             <ul className="list-disc pl-5 sm:pl-6 space-y-1 sm:space-y-2 text-base sm:text-lg">
@@ -196,60 +199,50 @@ const ProductDetail = () => {
           delivery • Premium quality guaranteed.
         </p>
 
-
-
-          <div className="w-max mx-auto">
-
-            <WhatsAppButton
-
-              productName={product.name}
-
-              className="w-full justify-center bg-white text-green-700 hover:bg-gray-100 
+        <div className="w-max mx-auto">
+          <WhatsAppButton
+            productName={product.name}
+            className="w-full justify-center bg-white text-green-700 hover:bg-gray-100 
 
                          py-3 sm:py-4 text-lg sm:text-xl rounded-2xl font-bold shadow-lg"
+          />
+        </div>
 
-            />
-
+        {/* Order Details Section */}
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
+          <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg hover:scale-105 transition-all">
+            <h4 className="text-xl font-bold mb-3">Delivery & Discounts</h4>
+            <ul className="space-y-2">
+              <li>All orders above Rs 750 free delivery.</li>
+              <li>Below Rs 70 courier charges.</li>
+              <li>
+                All orders above Rs 1500 get a 5% discount plus free delivery.
+              </li>
+            </ul>
           </div>
-
-  
-
-          {/* Order Details Section */}
-          <div className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg hover:scale-105 transition-all">
-              <h4 className="text-xl font-bold mb-3">Delivery & Discounts</h4>
-              <ul className="space-y-2">
-                <li>All orders above Rs 750 free delivery.</li>
-                <li>Below Rs 60 courier charges.</li>
-                <li>All orders above Rs 1500 get a 5% discount plus free delivery.</li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg hover:scale-105 transition-all">
-              <h4 className="text-xl font-bold mb-3">Taxes & Extras</h4>
-              <ul className="space-y-2">
-                <li>5% GST extra on all products except jackfruit items.</li>
-                <li>Complimentary farm fresh sample of Turmeric powder with all orders.</li>
-              </ul>
-            </div>
+          <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg hover:scale-105 transition-all">
+            <h4 className="text-xl font-bold mb-3">Taxes & Extras</h4>
+            <ul className="space-y-2">
+              <li>5% GST extra on all products except jackfruit items.</li>
+              <li>
+                Complimentary farm fresh sample of Turmeric powder with all
+                orders.
+              </li>
+            </ul>
           </div>
+        </div>
 
-  
-
-          <div
-
-            className="mt-10 sm:mt-12 flex justify-center gap-8 sm:gap-12 md:gap-20 
+        <div
+          className="mt-10 sm:mt-12 flex justify-center gap-8 sm:gap-12 md:gap-20 
 
                           text-sm sm:text-lg font-medium"
+        >
+          <div className="flex items-center gap-3">
+            <QualityIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
 
-          >
-
-            <div className="flex items-center gap-3">
-
-              <QualityIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
-
-              <span>Premium Quality</span>
-
-            </div>          <div className="flex items-center gap-3">
+            <span>Premium Quality</span>
+          </div>{" "}
+          <div className="flex items-center gap-3">
             <TruckIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
             <span>Fast Delivery</span>
           </div>

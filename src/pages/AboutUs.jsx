@@ -2,8 +2,8 @@ import React from "react";
 import { LOGO_URL } from "../data/constants";
 import YearImage from "../assets/Images/55year.jpg";
 import OneYearImage from "../assets/Images/1year.jpg";
-import AmericaImage from "../assets/Images/america.jpg";
-
+import AmericaImage from "../assets/Images/jack.jpg";
+import Supporta from "../assets/Images/supporta.jpg";
 const AboutUs = () => {
   return (
     <div className="container mx-auto px-4 py-10 font-roboto">
@@ -56,7 +56,7 @@ const AboutUs = () => {
             I look forward to your wholehearted support.
           </p>
 
-          <div className="my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+          <div className="my-8 grid grid-cols-1 sm:grid-cols-2  gap-8 text-center">
             <div className="w-full">
               <img
                 src={YearImage}
@@ -85,7 +85,18 @@ const AboutUs = () => {
                 className="w-full h-auto rounded-lg shadow-lg mx-auto"
               />
               <p className="text-lg text-gray-700 mt-4 italic font-roboto">
-                Moringa tree in America.
+                One year old and already bearing fruit! This young jackfruit
+                tree shows off its promising harvest,
+              </p>
+            </div>
+             <div className="w-full">
+              <img
+                src={Supporta}
+                alt="Supporta tree in America"
+                className="w-full h-auto rounded-lg shadow-lg mx-auto"
+              />
+              <p className="text-lg text-gray-700 mt-4 italic font-roboto">
+                Supporta plant in the farm
               </p>
             </div>
           </div>
